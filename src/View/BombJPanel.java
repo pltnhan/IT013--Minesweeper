@@ -11,7 +11,7 @@ import Controller.Listener;
 import Model.CommandHistory;
 import Model.MineLabel;
 import Model.StaticTool;
-import main.MainFrame;
+import View.MainFrame;
 
 public class BombJPanel extends JPanel {
     /**

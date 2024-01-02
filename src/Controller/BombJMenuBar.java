@@ -11,8 +11,8 @@ import javax.swing.JMenuItem;
 import Model.StaticTool;
 import View.AboutSweeping;
 import View.LeaderBoard;
+import View.MainFrame;
 import View.UserDefinedJDialog;
-import main.MainFrame;
 
 public class BombJMenuBar extends JMenuBar {
     /**

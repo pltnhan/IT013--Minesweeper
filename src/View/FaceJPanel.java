@@ -16,7 +16,7 @@ import javax.swing.JPanel;
 import javax.swing.border.Border;
 
 import Model.StaticTool;
-import main.MainFrame;
+import View.MainFrame;
 
 // Draw
 public class FaceJPanel extends JPanel {

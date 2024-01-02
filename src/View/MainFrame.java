@@ -1,4 +1,4 @@
-package main;
+package View;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -7,7 +7,6 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 import javax.swing.Timer;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
@@ -15,8 +14,6 @@ import javax.swing.UnsupportedLookAndFeelException;
 import Controller.BombJMenuBar;
 import Controller.TimerListener;
 import Model.StaticTool;
-import View.BombJPanel;
-import View.FaceJPanel;
 
 public class MainFrame extends JFrame implements ActionListener {
     /**
