@@ -14,7 +14,7 @@ import Model.LayBomb;
 import Model.Leader;
 import Model.MineLabel;
 import Model.StaticTool;
-import main.MainFrame;
+import View.MainFrame;
 
 public class Listener implements MouseListener{
     private MineLabel[][] mineLabel;

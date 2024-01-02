@@ -10,7 +10,7 @@ import javax.swing.JTextArea;
 
 import Model.Leader;
 import Model.StaticTool;
-import main.MainFrame;
+import View.MainFrame;
 import Model.Leader1;
 
 public class LeaderBoard extends JDialog {

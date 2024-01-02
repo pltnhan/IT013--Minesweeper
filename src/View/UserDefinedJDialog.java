@@ -22,10 +22,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.Border;
+import Model.StaticTool;
 
 import Controller.UserDefinedListener;
-import Model.StaticTool;
-import main.MainFrame;
 
 public class UserDefinedJDialog extends JDialog {
 

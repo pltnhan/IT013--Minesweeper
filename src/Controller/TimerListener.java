@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import Model.StaticTool;
-import main.MainFrame;
+import View.MainFrame;
 
 // Timer set
 public class TimerListener implements ActionListener {

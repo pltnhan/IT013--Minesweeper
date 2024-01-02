@@ -1,5 +1,5 @@
 public class Cell {
-    private boolean isCovered;
+    boolean isCovered;
     private boolean isMarked;
     private CellType cellType;
 
