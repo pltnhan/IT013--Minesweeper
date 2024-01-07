@@ -27,11 +27,6 @@ public class Board extends JPanel implements ActionListener {
 	    private int minesLeft;//keeps track of how many mines are left based on what user has flagged
 	    //2D array to represent game board
 	    protected static Cell[][] gameBoard;
-	    //total number of cells
-	    private int allCells;
-	    
-	    //Fields related to images used in our game to represent cells and bombs
-	    private final int NUM_IMAGES = 13;
 	    //Using map as collection to store images and their names, which can make it more easily retrievable 
 	    private java.util.Map<String, Image> images;
 
@@ -109,7 +104,7 @@ public class Board extends JPanel implements ActionListener {
                 cell.isCovered = true;
                 inGame = true;
             }
-        else if (cell.getCellType() == CellType.BombNeighbor) {
+        else if (cell.getCellType() == CellType.Bombneighbor) {
                 cell.isCovered = true;
             }
             
@@ -122,7 +117,7 @@ public class Board extends JPanel implements ActionListener {
                 while (!gameSteps.empty()) {
                     int j = (Integer)gameSteps.pop();
                     Cell cellNext = gameBoard[j / N_COLS][j % N_ROWS];
-                    if (cellNext.getCellType().equals(CellType.BombNeighbor)) {
+                    if (cellNext.getCellType().equals(CellType.Bombneighbor)) {
                         gameSteps.push(j);
                        break;
                     } else {
@@ -178,8 +173,8 @@ public class Board extends JPanel implements ActionListener {
                                     Boolean.toString(gameBoard[i][j].isMarkedCell()) + CELL_SPLITTER+ "0");
                             break;
                     //if cell is a neighbor of bomb    
-                    case BombNeighbor:
-                            printLine.println(CellType.BombNeighbor.toString() + CELL_SPLITTER +
+                    case Bombneighbor:
+                            printLine.println(CellType.Bombneighbor.toString() + CELL_SPLITTER +
                                     Boolean.toString(gameBoard[i][j].isCoveredCell()) + CELL_SPLITTER +
                                     Boolean.toString(gameBoard[i][j].isMarkedCell()) + CELL_SPLITTER +
                                     gameBoard[i][j].getImageName());
@@ -299,16 +294,15 @@ public class Board extends JPanel implements ActionListener {
                         if (lineValue.length == 4) {
                             if (null != lineValue[0]) switch (lineValue[0]) {
                                 case "Empty":
-                                    gameBoard[i / N_COLS][i % N_ROWS] = new EmptyCell(lineValue[1], lineValue[2]);
+                                    gameBoard[i / N_COLS][i % N_ROWS] = new EmptyCell();
 
                                     break;
                                 case "Bomb":
-                                    gameBoard[i / N_COLS][i % N_ROWS] = new BombCell(lineValue[1], lineValue[2]);
+                                    gameBoard[i / N_COLS][i % N_ROWS] = new BombCell();
 
                                     break;
                                 case "BombNeighbor":
-                                    gameBoard[i / N_COLS][i % N_ROWS] = new NeighborOfBombCell(lineValue[1], lineValue[2], 
-                                                Integer.valueOf(lineValue[3]));
+                                    gameBoard[i / N_COLS][i % N_ROWS] = new NeighborOfBombCell();
                                     break;
                                 default:
                                     break;
@@ -342,8 +336,6 @@ public class Board extends JPanel implements ActionListener {
         inGame = true;
         minesLeft = N_MINES;
 
-        allCells = N_ROWS * N_COLS;
-        
         //2D Array of cells in gameboard
         gameBoard = new Cell[N_ROWS][N_COLS];
        
@@ -375,7 +367,7 @@ public class Board extends JPanel implements ActionListener {
                 				&& positionX + dx >= 0 && positionY + dy >=0) {
                 			CellType typeOfCell = gameBoard[positionX + dx][positionY + dy].getCellType();
                 			if(typeOfCell != CellType.Bomb) {//not already a neighbor cell
-                                         if (typeOfCell != CellType.BombNeighbor) {
+                                         if (typeOfCell != CellType.Bombneighbor) {
                                              NeighborOfBombCell neighbor = new NeighborOfBombCell();
                                                 neighbor.cellCount();
                                                 gameBoard[positionX + dx][positionY + dy] = neighbor;

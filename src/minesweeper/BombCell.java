@@ -1,3 +1,5 @@
+package minesweeper;
+
 public class BombCell extends Cell {
     public BombCell() {
         super();

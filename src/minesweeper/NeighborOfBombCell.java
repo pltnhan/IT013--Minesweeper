@@ -1,14 +1,12 @@
-public class NeighborOfBombCell extends Cell {
-    private int bombCellCount;
+package minesweeper;
 
+public class NeighborOfBombCell extends Cell {
     public NeighborOfBombCell() {
         super();
-        this.bombCellCount = 0;
     }
 
     public NeighborOfBombCell(boolean isCovered, boolean isMarked) {
         super(isCovered, isMarked);
-        this.bombCellCount = 0;
     }
 
     public void getCount() {

@@ -1,3 +1,5 @@
+package minesweeper;
+
 public class Cell {
     boolean isCovered;
     private boolean isMarked;

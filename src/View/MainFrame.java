@@ -5,13 +5,11 @@ import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.Timer;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
-import Controller.BombJMenuBar;
 import Controller.TimerListener;
 import Model.StaticTool;
 
@@ -35,16 +33,16 @@ public class MainFrame extends JFrame implements ActionListener {
     // Main interface of the game
     public MainFrame() {
         init();
-        JButton undo = new JButton();
-        undo.setText("Undo");
-        undo.addActionListener(e -> {
+        // JButton undo = new JButton();
+        // undo.setText("Undo");
+        // undo.addActionListener(e -> {
 
-        });
-        JButton leaderBoard = new JButton();
-        leaderBoard.setText("Leader Board");
-        leaderBoard.addActionListener(e -> {
+        // });
+        // JButton leaderBoard = new JButton();
+        // leaderBoard.setText("Leader Board");
+        // leaderBoard.addActionListener(e -> {
 
-        });
+        // });
 
         this.setIconImage(StaticTool.imageIcon.getImage());
         this.setTitle("MineSweeper QnQ");
@@ -54,8 +52,8 @@ public class MainFrame extends JFrame implements ActionListener {
         this.setLocationRelativeTo(null);
         this.pack();
         this.setVisible(true);
-        this.add(leaderBoard);
-        this.add(undo);
+        // this.add(leaderBoard);
+        // this.add(undo);
 
 
     }
