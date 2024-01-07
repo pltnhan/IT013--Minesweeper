@@ -1,4 +1,4 @@
-package Controller;
+package View;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -9,10 +9,6 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
 import Model.StaticTool;
-import View.AboutSweeping;
-import View.LeaderBoard;
-import View.MainFrame;
-import View.UserDefinedJDialog;
 
 public class BombJMenuBar extends JMenuBar {
     /**
